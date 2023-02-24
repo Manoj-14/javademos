@@ -17,6 +17,30 @@ public class Loopsdemo {
 //		for(int i =1 ; i<10 ; i+=2) sum+=i ;
 //		System.out.println(sum);
 		
-		for (int i = 10 ; i>0 ; i--) System.out.println(i);
+//		for (int i = 10 ; i>0 ; i--) System.out.println(i);
+		
+		int i =0 ;
+		while (i<6) {
+			System.out.println(i);
+			i++;
+		};
+		
+		
+		char op = 'y';
+		
+		switch(op) {
+		case 'a' : 
+			System.out.println("Option A");
+			break;
+		case 'b' : 
+			System.out.println("Option B");
+			break;
+		case 'c' : 
+			System.out.println("Option C");
+			break;
+		default:
+			System.out.println("Invalid");
+			
+		}
 	}
 }
