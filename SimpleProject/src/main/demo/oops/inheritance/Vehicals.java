@@ -2,9 +2,10 @@ package main.demo.oops.inheritance;
 
 public class Vehicals {
 	int a , b ;
-	Vehicals(int a,int b){
+	protected Vehicals(int a,int b){
 		this.a = a;
 		this.b = b ;
+		System.out.println("Inside Inheritance -> Vehical Constructor");
 	}
 	void fuel() {
 		System.out.println("Petrol");
