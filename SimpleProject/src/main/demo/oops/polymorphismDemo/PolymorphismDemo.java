@@ -2,10 +2,10 @@ package main.demo.oops.polymorphismDemo;
 
 public class PolymorphismDemo {
 	public static void main(String[] args) {
-//		CompileTimePoly cmp = new CompileTimePoly();
-//		cmp.add(3, 2);
-//		cmp.add(3.23f, 5.76f);
-//		cmp.add(3, 8, 1);
+		CompileTimePoly cmp = new CompileTimePoly();
+		cmp.add(3, 2);
+		cmp.add(3.23f, 5.76f);
+		cmp.add(3, 8, 1);
 		
 		
 		Macbook mb = new MacbookPro();
