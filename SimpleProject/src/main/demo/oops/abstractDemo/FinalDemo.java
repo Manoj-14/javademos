@@ -1,4 +1,4 @@
-package main.demo.abstractDemo;
+package main.demo.oops.abstractDemo;
 
 public class FinalDemo{
 	public static void main(String[] args) {
