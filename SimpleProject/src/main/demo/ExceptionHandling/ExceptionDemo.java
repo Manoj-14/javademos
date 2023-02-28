@@ -1,10 +1,12 @@
 package main.demo.ExceptionHandling;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ExceptionDemo {
 	public static void main(String[] args) {
-		 nullpointerDemo();
+//		 nullpointerDemo();
+		zeroErrorDemo();
 	}
 	
 	
@@ -24,10 +26,13 @@ public class ExceptionDemo {
 			a = input.nextInt();
 			b = input.nextInt();
 			int res = a / b;
-			System.out.printf(" Result: %d\n",res);
-		}catch(Exception e){
-			System.out.println("Error is "+e);
+			System.out.printf("Result: %d\n",res);
+		}catch(ArithmeticException e){
+			System.out.println("Arithmetic Exception");
+		}catch(InputMismatchException ime) {
+			System.out.println("Input Mismatch Exception");
 		}
-		System.out.println("Outside the try");
+		
+//		System.out.println("Outside the try");
 	}
 }
