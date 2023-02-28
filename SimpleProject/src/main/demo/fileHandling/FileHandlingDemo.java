@@ -1,5 +1,6 @@
 package main.demo.fileHandling;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -7,6 +8,7 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Reader;
 import java.util.Random;
 
 public class FileHandlingDemo {
@@ -22,9 +24,10 @@ public class FileHandlingDemo {
 //		fileInputStream();
 //		fileOutputStream();
 //		fileInputStream();
-		fileReader();
-		fileWritter();
-		fileReader();
+//		fileReader();
+//		fileWritter();
+//		fileReader();
+		bufferReader();
 	}
 
 	private static void fileInputStream() {
@@ -116,6 +119,24 @@ public class FileHandlingDemo {
 			e.printStackTrace();
 		}
 
+	}
+	private static void bufferReader() {
+		File file = new File("C:\\Users\\manm\\git\\javademos\\SimpleProject\\src\\file.txt");
+		String line;
+		try {
+			FileReader fr = new FileReader(file);
+			BufferedReader br = new BufferedReader(fr);
+			while((line = br.readLine()) != null) {
+				System.out.println(line);
+			}
+			fr.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }
