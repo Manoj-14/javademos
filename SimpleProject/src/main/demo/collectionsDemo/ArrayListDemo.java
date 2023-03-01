@@ -6,7 +6,9 @@ public class ArrayListDemo {
 	public static void main(String[] args) {
 		arrListOfAll();
 		System.out.println("------------");
-		
+		arrListofString();
+		System.out.println("------------");
+		arrListofInt();
 	}
 	
 	public static void arrListOfAll() {
@@ -25,6 +27,13 @@ public class ArrayListDemo {
 		System.out.println(alInt);
 	}
 	
-	
+	public static void arrListofString() {
+		ArrayList<String> alInt = new ArrayList<>();
+		alInt.add("Manoj");
+		alInt.add("Darshan");
+		alInt.add("Karthik");
+		alInt.add("Mohan");
+		System.out.println(alInt);
+	}
 	
 }
