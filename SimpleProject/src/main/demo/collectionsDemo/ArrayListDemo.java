@@ -16,6 +16,15 @@ public class ArrayListDemo {
 		al.add("Manoj");
 		System.out.println(al);
 	}
+	public static void arrListofInt() {
+		ArrayList<Integer> alInt = new ArrayList<>();
+		alInt.add(2);
+		alInt.add(4);
+		alInt.add(6);
+		alInt.add(8);
+		System.out.println(alInt);
+	}
+	
 	
 	
 }
