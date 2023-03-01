@@ -3,7 +3,7 @@ package main.demo.arrays;
 public class ArraysDemo {
 
 	public static void main(String[] args) {
-		int arr[] = { 10, 20, 30, 40 };
+		int arr[] = { 10, 20, 30, 40,35 };
 		int[] arr1;
 
 //		printArr(arr);
@@ -14,7 +14,9 @@ public class ArraysDemo {
 //		arr[4] = new Integer(37);
 //		printArr(arr);
 
-		addZeroAtFive();
+//		addZeroAtFive();
+		System.out.println("Sum of array:"+sumOfArr(arr));
+		System.out.println("Sum of even num in array:"+sumofEvenNumInArr(arr));
 	}
 
 	public static void printArr(int[] arr) {
@@ -46,5 +48,12 @@ public class ArraysDemo {
 		return sum;
 	}
 	
-	
+	public static int sumofEvenNumInArr(int arr[]) {
+		int sum =0;
+		for(int i:arr) {
+			if (i%2==0)
+				sum+=i;
+		}
+		return sum;
+	}
 }
