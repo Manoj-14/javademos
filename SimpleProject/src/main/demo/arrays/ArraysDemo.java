@@ -17,6 +17,12 @@ public class ArraysDemo {
 //		addZeroAtFive();
 		System.out.println("Sum of array:"+sumOfArr(arr));
 		System.out.println("Sum of even num in array:"+sumofEvenNumInArr(arr));
+		System.out.println("Reverse string:"+reverseString("Hello World"));
+		
+		
+		String str = "Hello";
+		char a[] = str.toCharArray();
+		System.out.println(a);
 	}
 
 	public static void printArr(int[] arr) {
@@ -55,5 +61,16 @@ public class ArraysDemo {
 				sum+=i;
 		}
 		return sum;
+	}
+	
+	private static String reverseString(String str) {
+		String reverse="";
+//		for(int i = str.length()-1 ; i>=0 ;i--) {
+//			reverse += str.charAt(i);
+//		}
+		
+		for (char i:str.toCharArray()) reverse =i + reverse ;
+		
+		return reverse;
 	}
 }
