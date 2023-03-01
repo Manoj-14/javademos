@@ -9,6 +9,8 @@ public class ArrayListDemo {
 		arrListofString();
 		System.out.println("------------");
 		arrListofInt();
+		System.out.println("------------");
+		modifyArrList();
 	}
 	
 	public static void arrListOfAll() {
@@ -36,4 +38,29 @@ public class ArrayListDemo {
 		System.out.println(alInt);
 	}
 	
+	public static void modifyArrList() {
+		ArrayList<Integer> alInt = new ArrayList<Integer>();
+		
+		for (int i=10;i<=100;i+=10) {
+			alInt.add(i);
+		}
+		System.out.println(alInt);
+		
+		System.out.println("Setting value at pos 3:");
+		alInt.set(3, 101);
+		System.out.println(alInt);
+		
+		System.out.println("Adding value at pos 3:");
+		alInt.add(3, 40);
+		System.out.println(alInt);
+		
+		System.out.println("Removing a value at index 4:");
+		alInt.remove(4);
+		System.out.println(alInt);
+		
+		System.out.println("Searching value 90:");
+		System.out.println(alInt.contains(90));
+		System.out.println("Searching value 200:");
+		System.out.println(alInt.contains(200));
+	}
 }
