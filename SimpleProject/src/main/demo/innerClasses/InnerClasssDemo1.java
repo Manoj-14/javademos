@@ -1,6 +1,6 @@
 package main.demo.innerClasses;
 
-public class InnerClasss {
+public class InnerClasssDemo1 {
 	public static void main(String[] args) {
 		ElectronicDevices.powerOn();
 
