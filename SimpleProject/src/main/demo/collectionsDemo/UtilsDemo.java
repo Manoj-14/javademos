@@ -1,6 +1,7 @@
 package main.demo.collectionsDemo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -13,6 +14,21 @@ public class UtilsDemo {
 	
 	
 	private static void arrListDemo() {
+		int[] arr = {40,10,15,7} ;
+		for(int i:arr) System.out.print(i+",");
+		System.out.println();
+		
+		Arrays.sort(arr);
+		for(int i:arr) System.out.print(i+",");
+		System.out.println();
+		
+		String[] strArr = {"u","a","k","d"};
+		List<String> strList = Arrays.asList(strArr);
+		System.out.println(strList);
+	}
+
+
+	private static void CollectionsDemo() {
 		List<String> alist = new ArrayList<>();
 		alist.add("Manoj");
 		alist.add("Darshan");
