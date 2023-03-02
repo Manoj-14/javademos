@@ -1,13 +1,22 @@
 package main.demo.collectionsDemo;
 
+import java.io.Serializable;
 import java.util.Comparator;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class TreeSetDemo {
 	public static void main(String[] args) {
-		intSet();
-		stringSet();
+//		intSet();
+//		stringSet();
+		
+		Set<Employee> emps = new TreeSet<Employee>(new EmpNameComparator());
+		emps.add(new Employee(1, "Manoj", 15000, "A0012"));
+		emps.add(new Employee(2, "Abhi", 15000, "A0013"));
+		emps.add(new Employee(3, "Zoya", 15000, "A0014"));
+		emps.add(new Employee(4, "Shashank", 15000, "A0015"));
+		
+		System.out.println(emps);
 	}
 	
 	
@@ -41,6 +50,9 @@ public class TreeSetDemo {
 	
 }
 
+//comparable -> to provide natural ordering
+//comparator -> to change natural ordering
+
 class StringComparator implements Comparator<String>{
 
 	@Override
@@ -52,4 +64,36 @@ class StringComparator implements Comparator<String>{
 		else return o1.compareTo(o2);
 	}
 	
+}
+
+class Employee implements Comparable<Employee> {
+	int id;
+	String name;
+	double salary;
+	transient String aadharNo; //transient -> dont't serialize
+
+	public Employee(int id, String name, double salary, String aadharNo) {
+
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		this.aadharNo = aadharNo;
+	}
+
+	public String toString() {
+		return this.id + "|" + this.name + "|" + this.salary + "|" + this.aadharNo;
+	}
+
+	@Override
+	public int compareTo(Employee o) {
+		return (this.id < o.id)? -1 : 1 ;
+//		return 0;
+	}
+}
+
+class EmpNameComparator implements Comparator<Employee>{
+	@Override
+	public int compare(Employee o1, Employee o2) {
+		return o1.name.compareTo(o2.name);
+	}
 }
