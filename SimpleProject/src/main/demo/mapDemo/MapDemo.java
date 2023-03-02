@@ -25,7 +25,16 @@ public class MapDemo {
 		for ( String key : marks.keySet()) {
 			System.out.println(marks.get(key));
 		}
+
+		Map<String, Integer> marks1 = new LinkedHashMap<>();
+		marks1.put("Mark",80);
+		marks1.put("Antony",95);
+		marks1.put("Tom",65);
+		marks1.put("Jerry",55);
+		marks1.put("Max",100);
+		marks1.put("Tom",35);
 		
+		System.out.println(marks1);
 	}
 
 }
